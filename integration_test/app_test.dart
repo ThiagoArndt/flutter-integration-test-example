@@ -8,8 +8,6 @@ import 'package:integration_test/integration_test.dart';
 import 'package:flutter_integration_test_example/main.dart' as app;
 import './utils/helpers.dart';
 
-class FakeRoute extends Fake implements Route {}
-
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
