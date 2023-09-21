@@ -5,7 +5,7 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 @RoutePage()
 class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+  const HomeView({super.key = const Key('home_screen')});
 
   @override
   State<HomeView> createState() => _HomeViewState();

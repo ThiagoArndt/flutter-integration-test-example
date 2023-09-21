@@ -35,22 +35,29 @@ class _LoginViewState extends State<LoginView> with PageAbstractMixin {
           runSpacing: 25,
           children: [
             TextFieldApp(
+              key: const Key('user_name_text_field'),
               hint: 'Nome do Usuário',
               controller: userTextcontroller,
             ),
             TextFieldApp(
+              key: const Key('password_text_field'),
               hint: 'Senha do Usuário',
               controller: passwordTextcontroller,
             ),
             ButtonApp(
+              key: const Key('sign_in_button'),
               onPressed: () async {
                 await Future.delayed(Duration(seconds: 2), () {});
-                if (userTextcontroller.text == "a" && passwordTextcontroller.text == "a") {
-                  await isAuthenticated.put('1', true);
-                  await context.router.replaceNamed('/');
-                } else {
+                try {
+                  if (userTextcontroller.text == "a" && passwordTextcontroller.text == "a") {
+                    await isAuthenticated.put('1', true);
+                    await context.router.replaceNamed('/');
+                  } else {
+                    throw Exception();
+                  }
+                } catch (e) {
                   launchScaffoldMessager(context, text: 'Usuário ou senha inválidos', color: Colors.red);
-                  return Future.error(Exception('Erro'));
+                  rethrow;
                 }
               },
               btnTitle: 'Entrar',

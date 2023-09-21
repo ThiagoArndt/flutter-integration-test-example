@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _appRouter = AppRouter();
+
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Integration Test Example',

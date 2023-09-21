@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class TextFieldApp extends StatelessWidget {
   final String hint;
   final TextEditingController controller;
+
   const TextFieldApp({super.key, required this.hint, required this.controller});
 
   @override

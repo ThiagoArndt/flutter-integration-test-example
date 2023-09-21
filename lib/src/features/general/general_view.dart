@@ -28,6 +28,7 @@ class _GeneralViewState extends State<GeneralView> {
           ),
           SizedBox(height: 15),
           ElevatedButton(
+              key: const Key('sign_out_button'),
               onPressed: () async {
                 await isAuthenticated.put('1', false);
                 log(isAuthenticated.get('1').toString());

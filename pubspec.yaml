@@ -38,6 +38,8 @@ dependencies:
   salomon_bottom_bar: ^3.3.2
   hive_flutter: ^1.1.0
   auto_route: ^7.8.1
+  mockito: ^5.4.2
+  mockingjay: ^0.4.0
 
 dev_dependencies:
   flutter_test:
